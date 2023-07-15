@@ -1,9 +1,8 @@
+
 import 'package:flutter/material.dart';
-import 'package:uiwithwebview/Liveresults.dart';
-import 'package:uiwithwebview/buygold.dart';
 
-import 'webview.dart';
-
+import 'Liveresults.dart';
+import 'buygold.dart';
 
 
 class home extends StatefulWidget {
@@ -16,17 +15,15 @@ class home extends StatefulWidget {
 class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    var height=MediaQuery.of(context).size.height;
-    var width=MediaQuery.of(context).size.width;
-
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       body: SafeArea(
-        child: Padding(padding:EdgeInsets.only(left: 10,right: 10) ,
-          child: Column(children: [
-          Liveresults(),
-          webviewchart(),
-        buygold()]),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          child: Column(
+              children: const [Liveresults(), buygold()]),
         ),
       ),
     );
