@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:uiwithwebview/Liveresults.dart';
 
-import 'package:uiwithwebview/ui.dart';
+import 'package:uiwithwebview/homepage.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 
 void main() {
-  runApp(MaterialApp(home: bks()));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false,
+      home: home()));
 }
 
 

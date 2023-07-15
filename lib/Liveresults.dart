@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ex1 extends StatelessWidget {
-  const ex1({Key? key}) : super(key: key);
+class Liveresults extends StatelessWidget {
+  const Liveresults({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,33 +24,33 @@ class ex1 extends StatelessWidget {
               Row(
                 children: [
                   Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,border: Border.all(color: Colors.purple)),
+                      color: Colors.blueGrey.shade50,border: Border.all(color: Colors.purple)),
                     height:height*0.07,width: width*0.30,
-                    child: Stack(
-                      children: [Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(padding:EdgeInsets.only(top: 5,left: 10),
-                              child: Row(
-                                children: [
-                                  Text('Gold Buy Rate',style: TextStyle(fontSize: 12,)),SizedBox(width:10,),Icon(size: 13,
-                                      Icons.arrow_forward_ios)
-                                ],
-                              )),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 7,left: 10),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(padding:EdgeInsets.only(top: 5,left: 10),
                             child: Row(
                               children: [
-                                Text('5,220.89 ',style: TextStyle(fontSize: 15,
-                                    color: Colors.green,fontWeight: FontWeight.bold),),
-                                Icon(Icons.arrow_upward,size: 16,color: Colors.green,)
+
+                                Text('Gold Buy Rate',style: TextStyle(fontSize: 12,)),SizedBox(width:10,),
+                                Icon(size: 13,
+                                    Icons.arrow_forward_ios)
                               ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ]),),SizedBox(width: 7,),
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 7,left: 10),
+                          child: Row(
+                            children: [
+                              Text('5,220.89 ',style: TextStyle(fontSize: 15,
+                                  color: Colors.green,fontWeight: FontWeight.bold),),
+                              Icon(Icons.arrow_upward,size: 16,color: Colors.green,)
+                            ],
+                          ),
+                        )
+                      ],
+                    ),),SizedBox(width: 7,),
                   Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,border: Border.all(color: Colors.grey)),
+                      color: Colors.blueGrey.shade50,border: Border.all(color: Colors.grey)),
                     height:height*0.07,width: width*0.30,
                     child:Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -74,7 +74,7 @@ class ex1 extends StatelessWidget {
                       ],
                     ),),SizedBox(width: 7),
                   Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,border: Border.all(color: Colors.grey)),
+                      color: Colors.blueGrey.shade50,border: Border.all(color: Colors.grey)),
                     height:height*0.07,width: width*0.30,
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -101,3 +101,59 @@ class ex1 extends StatelessWidget {
               padding: EdgeInsets.only(top: height*0.03,)),));
   }
 }
+
+
+////live indicator
+
+class test extends StatelessWidget {
+  const test({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Center(child: Stack(
+        children: [Positioned(child: Container(
+          
+          height:MediaQuery.of(context).size.height*0.07,
+          width: MediaQuery.of(context).size.width*0.38,
+          decoration: BoxDecoration(
+           borderRadius: BorderRadius.circular(20),
+              border: Border.all(width: 1)),
+          child: Stack(clipBehavior: Clip.none,
+              children: [Positioned(top: -10,left:20,
+              child:Container(decoration: BoxDecoration(color: Colors.lightGreenAccent,
+                  ),
+                 
+                  child: Text('.  Live  ')),
+              ),Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text('Gold By rate'),
+                        SizedBox(width: 30,),
+                        Icon(size: 13,
+                            Icons.arrow_forward_ios)
+
+                      ],
+                    ),
+                    Row(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('5,220.89 ',style: TextStyle(fontSize: 15,
+                            color: Colors.green,fontWeight: FontWeight.bold),),
+                        Icon(Icons.arrow_upward,size: 16,color: Colors.green,)
+
+                      ],
+                    ),
+
+                  ],
+                ),
+              )]),
+        ))],
+      )),
+
+    );
+  }
+}
+

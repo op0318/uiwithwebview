@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class secondexpand extends StatefulWidget {
-  const secondexpand({Key? key}) : super(key: key);
+class webviewchart extends StatefulWidget {
+  const webviewchart({Key? key}) : super(key: key);
 
   @override
-  State<secondexpand> createState() => _secondexpandState();
+  State<webviewchart> createState() => _webviewchartState();
 }
 
-class _secondexpandState extends State<secondexpand> {
+class _webviewchartState extends State<webviewchart> {
   WebViewController  controller=WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(const Color(0x00000000))
@@ -65,28 +65,33 @@ class _secondexpandState extends State<secondexpand> {
                       ,Padding(
                         padding: const EdgeInsets.only(top: 5),
                         child: Container(
-                          decoration: BoxDecoration(border: Border.all(width: 1),
+                          decoration: BoxDecoration(border: Border.all(width: 1,color: Colors.grey),
                               borderRadius: BorderRadius.circular(15)),
-                          height: height*0.05,width: width*0.35,
+                          height: height*0.036,width: width*0.35,
                           child: Center(child: Padding(padding: EdgeInsets.only(left: 10),
                             child: Row(
                               children: [
-                                Text('Chart option'),SizedBox(width: 14,),
+                                Text('Chart option',style: TextStyle(color: Colors.grey)),SizedBox(width: 14,),
                                 Icon(Icons.keyboard_arrow_down_outlined)
                               ],
                             ),
                           )),
                         ),
                       ),
-                      Container(child: IconButton(onPressed: (){}, icon: Icon(Icons.qr_code_scanner)),
-                        height: height*0.06,width:width*0.12,color: Colors.white,)
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Container(
+                          height: 40,width: 40,
+                            child: Center(child: Image.asset('assets/images/icon.jpg',height: 14,width: 14,))),
+                      )
                     ],
 
 
                   ),
                 ),
-                Container(height: MediaQuery.of(context).size.height*0.15,
-                  width: MediaQuery.of(context).size.width*1,color: Colors.white,
+                Container(
+                  height: MediaQuery.of(context).size.height*0.15,
+                  width: MediaQuery.of(context).size.width*1,color: Colors.blueGrey.shade50,
                   child: WebViewWidget(controller: controller,),),
                 Container(child:Column(
                   children: [Row(
@@ -94,44 +99,47 @@ class _secondexpandState extends State<secondexpand> {
                       padding: const EdgeInsets.all(8),
                       child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                           border: Border.all(width: 1)),
-                          height:height*0.04 ,width:width*0.08,child:Center(child: Text('1M'))),
+                          height:height*0.04 ,width:width*0.08,child:Center(child: Text('1M',style: TextStyle(
+                              fontSize: 11,color: Colors.black,fontWeight: FontWeight.bold
+                          ),))),
                     ),
                       Padding(
                         padding: const EdgeInsets.all(8),
-                        child: Container(decoration: BoxDecoration(color: Colors.deepPurple,
+                        child: Container(decoration: BoxDecoration(color: Color.fromRGBO(103, 49, 71, 1),
                             borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('6M'))),
+                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('6M',style: TextStyle(color: Colors.black,fontSize: 11,fontWeight: FontWeight.bold),))),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8),
                         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.07,child:Center(child: Text('1Y'))),
+                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('1Y',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 11),))),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8),
                         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('2Y'))),
+                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('2Y',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 11),))),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8),
                         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('3Y'))),
+                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('3Y',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 11),))),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8),
                         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('5Y'))),
+                            height:height*0.04 ,width:width*0.08,child:Center(child: Text('5Y',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 11),))),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8),
                         child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
                             border: Border.all(width: 1)),
-                            height:height*0.04 ,width:width*0.15,child:Center(child: Text('Custom'))),
+                            height:height*0.04 ,width:width*0.15,child:Center(child: Text('Custom',style: TextStyle(fontWeight: FontWeight.bold,
+                                color: Colors.black,fontSize: 11),))),
                       )
                     ],
                   ),
@@ -142,24 +150,24 @@ class _secondexpandState extends State<secondexpand> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Live'),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Live'),SizedBox(height: 3),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),
                         ),VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Open'),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Open'),SizedBox(height: 3,),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Volum'),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Volum'),SizedBox(height: 3),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),
                           VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Days Range'),Text('1955.17-1987.08',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Days Range'),SizedBox(height: 3,),Text('1955.17-1987.08',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           )
                         ],
                       ),
