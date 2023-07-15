@@ -150,24 +150,24 @@ class _webviewchartState extends State<webviewchart> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Live'),SizedBox(height: 3),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Live'),SizedBox(height: 4),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),
                         ),VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Open'),SizedBox(height: 3,),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Open',style: TextStyle(color: Colors.grey)),SizedBox(height: 4,),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Volum'),SizedBox(height: 3),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Volum',style: TextStyle(color: Colors.grey)),SizedBox(height: 4),Text('1957.54',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           ),
                           VerticalDivider(),
                           Padding(
                             padding: const EdgeInsets.only(top: 6,left: 5,right: 5),
                             child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [Text('Days Range'),SizedBox(height: 3,),Text('1955.17-1987.08',style: TextStyle(fontWeight: FontWeight.bold),)],),
+                              children: [Text('Days Range',style: TextStyle(color: Colors.grey)),SizedBox(height: 4,),Text('1955.17-1987.08',style: TextStyle(fontWeight: FontWeight.bold),)],),
                           )
                         ],
                       ),
